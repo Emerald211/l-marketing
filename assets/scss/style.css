@@ -8184,8 +8184,8 @@ body.is-loading .js-cursor {
 }
 .business-service-item a {
 	display: flex;
-	/* align-items: center; */
-	justify-content: space-between;
+	align-items: baseline;
+	/* justify-content: space-between; */
 	width: 100%;
 	padding: 80px 0;
 	position: relative;
@@ -8219,12 +8219,14 @@ body.is-loading .js-cursor {
 @media screen and (max-width: 1700px) {
 	.business-service-item a {
 		padding: 80rem 0;
+		align-items: baseline;
 	}
 }
 @media screen and (max-width: 768px) {
 	.business-service-item a {
 		flex-direction: column;
 		justify-content: center;
+		align-items: baseline;
 		padding: 24rem 0;
 	}
 
@@ -8354,7 +8356,7 @@ body.is-loading .js-cursor {
 	letter-spacing: 0.02em;
 }
 .business-service-item h1{
-	font-size: 300px;
+	font-size: 150px;
 	color: #faf9f9 !important;
 	opacity: 20%;
 }
@@ -8378,7 +8380,86 @@ body.is-loading .js-cursor {
 
 }
 
+.business-con{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	margin-top: 60px;
+}
 
+.business-description{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding: 40px 20px;
+	background: rgb(245, 245, 245);
+}
+
+.business-description h2{
+	font-size: 20px;
+	font-weight: bold;
+	color: #000 !important;
+}
+
+.business-description p{
+	font-size: 12px;
+	margin: 20px;
+	text-align: center;
+	max-width: 800px;
+	line-height: 1.5;
+	color: black !important;
+}
+
+.business-description img{
+	width: 100%;
+	max-width: 600px;
+	height: auto;
+	border-radius: 10px;
+	
+}
+
+
+
+.business-feature{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+}
+
+.business-feature h2{
+	color: #06c755 !important;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.business-feature p{
+	font-size: 10px;
+}
+
+.business-feature .img-con{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: white;
+	width: 136px;
+	height: 136px;
+	border-radius: 50%;
+}
+
+.business-feature .img-con img{
+	width: auto;
+	height: auto;
+}
+
+
+@media screen and (max-width: 768px) {
+	.business-con{
+		grid-template-columns: repeat(1, 1fr);
+	}
+	
+}
 .section-steps{
 	display: flex;
 	flex-direction: column;
@@ -8403,6 +8484,7 @@ body.is-loading .js-cursor {
 	background: white;
 	display: flex;
 	align-items: center;
+	border-radius: 7px;
 	padding: 10px 30px;
 	gap: 20px;
 	width: 348px;
