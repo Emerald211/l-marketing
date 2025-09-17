@@ -1,0 +1,170 @@
+.footer {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  padding-bottom: 120px;
+  background: #f1f1f1;
+  @include pc {
+    padding-bottom: 120rem;
+  }
+  @include sp {
+    padding-bottom: 0;
+  }
+  .l-container {
+    background: linear-gradient(90deg, #4DB34B 0%, #12803B 100%);
+    border-radius: 24px;
+    padding: 160px 160px 80px 160px;
+    max-width: 92%;
+    @include responsive(1800px) {
+      max-width: 90%;
+    }
+    @include pc {
+      padding: 160rem 160rem 80rem 160rem;
+      border-radius: 16rem;
+    }
+    @include tb {
+      padding: 80rem 80rem 40rem 80rem;
+      border-radius: 16rem;
+    }
+    @include sp {
+      padding: 64rem 0;
+      border-radius: 24rem 24rem 0 0;
+      max-width: 100%;
+    }
+  }
+  &-top {
+    display: flex;
+    align-items: start;
+    justify-content: left;
+    padding-bottom: 64px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #FAFAFA;
+    @include pc {
+      padding-bottom: 64rem;
+      margin-bottom: 40rem;
+    }
+    @include sp {
+      margin-bottom: 64rem;
+      padding-bottom: 64rem;
+      display: block;
+    }
+    &-info {
+      margin-right: 175px;
+      @include pc {
+        margin-right: 175rem;
+      }
+      @include tb {
+        margin-right: 100rem;
+      }
+      @include sp {
+        margin-right: 0;
+        margin-bottom: 64rem;
+      }
+      &-logo {
+        @include sp {
+          text-align: center;
+        }
+        img,
+        svg {
+          width: 351px;
+          height: auto;
+          @include pc {
+            width: 351rem;
+          }
+          @include tb {
+            width: 260rem;
+          }
+          @include sp {
+            width: 219rem;
+          }
+        }
+      }
+    }
+    &-link {
+      display: flex;
+      align-items: start;
+      justify-content: left;
+      @include sp {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 46rem;
+      }
+      &__elem {
+        &:not(:last-child) {
+          margin-right: 120px;
+          @include pc {
+            margin-right: 120rem;
+          }
+          @include tb {
+            margin-right: 40rem;
+          }
+          @include sp {
+            margin-right: 0;
+            margin-bottom: 32rem;
+          }
+        }
+      }
+      li {
+        &:not(:last-child) {
+          margin-bottom: 32px;
+          @include pc {
+            margin-bottom: 32rem;
+          }
+          @include sp {
+            margin-bottom: 40rem;
+          }
+        }
+      }
+      a {
+        font-size: 22px;
+        font-family: $font-lato;
+        color: var(--g-color-white);
+        letter-spacing: 0.04em;
+        line-height: 1.1;
+        display: inline-block;
+        position: relative;
+        @include pc {
+          font-size: 22rem;
+        }
+        @include tb {
+          font-size: 17rem;
+        }
+        @include sp {
+          font-size: 16rem;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 0;
+          height: 1px;
+          background: var(--g-color-white);
+          transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        &:hover {
+          &::after {
+            width: 100%;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+  &-bottom {
+    &-copyright {
+      p {
+        font-size: 16px;
+        color: var(--g-color-white);
+        letter-spacing: 0.1em;
+        line-height: 1;
+        text-align: center;
+        font-weight: bold;
+        @include sp {
+          font-size: 10rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,610 @@
+.business-fv {
+  &-container {
+    padding: 258px 120px 0 64px;
+    @include pc {
+      padding: 258rem 120rem 0 64rem;
+    }
+    @include sp {
+      padding: 96rem 24rem 64rem;
+    }
+  }
+  .business-num {
+    @include sp {
+      margin: auto;
+      margin-bottom: 24rem;
+      text-align: center;
+    }
+    p {
+      font-size: 39px;
+      color: var(--g-color-black);
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      @include pc {
+        font-size: 39rem;
+      }
+      @include sp {
+        font-size: 24rem;
+      }
+    }
+  }
+  &-ttl {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: 82px;
+    @include pc {
+      margin-bottom: 82rem;
+    }
+    @include sp {
+      display: block;
+      margin-bottom: 24rem;
+    }
+    .page-ttl {
+      text-align: right;
+      @include sp {
+        text-align: center;
+      }
+    }
+  }
+  &-main {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    @include sp {
+      flex-direction: column-reverse;
+    }
+    &-txt {
+      max-width: 40%;
+      width: 100%;
+      padding-left: 36px;
+      @include pc {
+        padding-left: 36rem;
+      }
+      @include sp {
+        max-width: 100%;
+        padding: 0;
+      }
+      p {
+        font-size: 31px;
+        font-weight: bold;
+        color: var(--g-color-black);
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        @include pc {
+          font-size: 31rem;
+        }
+        @include sp {
+          font-size: 16rem;
+        }
+      }
+    }
+    &-img {
+      max-width: 957px;
+      width: 100%;
+      height: 564px;
+      border-radius: 24px;
+      overflow: hidden;
+      @include pc {
+        max-width: 957rem;
+        height: 564rem;
+        border-radius: 24rem;
+      }
+      @include sp {
+        max-width: 100%;
+        height: 229rem;
+        border-radius: 8rem;
+        margin-bottom: 24rem;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.business-reason {
+  padding: 285px 0 160px;
+  background: #4DB34B;
+  @include pc {
+    padding: 285rem 0 160rem;
+  }
+  @include sp {
+    padding: 24rem 0 64rem;
+  }
+  &-ttl {
+    text-align: center;
+    margin-bottom: 40px;
+    @include pc {
+      margin-bottom: 40rem;
+    }
+    @include sp {
+      margin-bottom: 24rem;
+    }
+    h2 {
+      font-weight: 700;
+      font-size: 39px;
+      line-height: 1.5;
+      letter-spacing: 0.02em;
+      margin-bottom: 64px;
+      color: white;
+      @include pc {
+        margin-bottom: 64rem;
+        font-size: 39rem;
+        color: white;
+      }
+      @include sp {
+        line-height: 1.2;
+        margin-bottom: 24rem;
+        font-size: 32rem;
+        color: white;
+      }
+    }
+    p {
+      color: var(--g-color-white);
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      text-align: center;
+      @include pc {
+        font-size: 25rem;
+      }
+      @include sp {
+        line-height: 1.5;
+        font-size: 16rem;
+      }
+    }
+  }
+  &-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    @include pc {
+      gap: 32rem;
+    }
+    @include sp {
+      gap: 40rem;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  &-item {
+    width: 100%;
+    &-img {
+      width: 100%;
+      margin-bottom: 32px;
+      @include pc {
+        margin-bottom: 32rem;
+      }
+      @include sp {
+        margin-bottom: 16rem;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    &-ttl {
+      margin-bottom: 16px;
+      @include pc {
+        margin-bottom: 16rem;
+      }
+      @include sp {
+        margin-bottom: 8rem;
+      }
+      p {
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 1;
+        letter-spacing: 0.02em;
+        color: #12803B;
+        @include pc {
+          font-size: 25rem;
+        }
+        @include sp {
+          font-size: 24rem;
+        }
+      }
+    }
+    &-txt {
+      color: var(--g-color-black);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: 0.02em;
+      @include sp {
+        font-size: 16rem;
+      }
+    }
+  }
+  &-txt {
+    margin-top: 140px;
+    @include pc {
+      margin-top: 140rem;
+    }
+    @include sp {
+      margin-top: 64rem;
+    }
+    p {
+      color: var(--g-color-black);
+      font-weight: 700;
+      font-size: 39px;
+      line-height: 1.5;
+      letter-spacing: 0.02em;
+      text-align: center;
+      @include pc {
+        font-size: 39rem;
+      }
+      @include sp {
+        letter-spacing: 0;
+        font-size: 24rem;
+      }
+    }
+  }
+  &-bottom {
+    text-align: center;
+    padding-top: 170px;
+    @include pc {
+      padding-top: 170rem;
+    }
+    @include sp {
+      padding-top: 24rem;
+    }
+    &-ttl {
+      margin-bottom: 64px;
+      @include pc {
+        margin-bottom: 64rem;
+      }
+      @include sp {
+        margin-bottom: 24rem;
+      }
+      p {
+        color: var(--g-color-black);
+        font-weight: 700;
+        font-size: 31px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        text-align: center;
+        @include pc {
+          font-size: 31rem;
+        }
+        @include sp {
+          font-size: 16rem;
+        }
+      }
+    }
+    &-items {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-bottom: 64px;
+      @include pc {
+        margin-bottom: 64rem;
+      }
+      @include sp {
+        margin-bottom: 24rem;
+        flex-direction: column;
+        gap: 12rem;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 4px;
+        width: 150%;
+        background: linear-gradient(90deg, #4DB34B 0%, #12803B 100%);
+        @include sp {
+          height: 2rem;
+          transform: translate(-50%, -50%) rotate(90deg);
+          width: 500rem;
+        }
+      }
+    }
+    &-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: 0 16px;
+      width: 374px;
+      height: 374px;
+      z-index: 2;
+      @include pc {
+        margin: 0 16rem;
+        width: 374rem;
+        height: 374rem;
+      }
+      @include sp {
+        margin: 0;
+        width: 294rem;
+        height: 294rem;
+      }
+      &::after {
+        content: '';
+        width: 264px;
+        height: 264px;
+        border-radius: 8px;
+        border: 4px solid #4DB34B;
+        background: var(--g-color-white);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        z-index: 1;
+        @include pc {
+          width: 264rem;
+          height: 264rem;
+        }
+        @include sp {
+          border: 3rem solid #4DB34B;
+          border-radius: 6rem;
+          width: 208rem;
+          height: 208rem;
+        }
+      }
+      img {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 16px;
+        width: 64px;
+        @include pc {
+          width: 64rem;
+          margin-bottom: 16rem;
+        }
+        @include sp {
+          width: 50rem;
+          margin-bottom: 12rem;
+        }
+      }
+      p {
+        position: relative;
+        z-index: 2;
+        color: var(--g-color-black);
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.3;
+        letter-spacing: 0.02em;
+        text-align: center;
+        @include pc {
+          font-size: 20rem;
+        }
+        @include sp {
+          font-size: 16rem;
+        }
+      }
+    }
+    & > p {
+      color: var(--g-color-black);
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 2;
+      letter-spacing: 0.02em;
+      position: relative;
+      margin-bottom: 80px;
+      display: inline-block;
+      @include pc {
+        margin-bottom: 80rem;
+        font-size: 25rem;
+      }
+      @include sp {
+        line-height: 1.2;
+        margin-bottom: 26rem;
+        font-size: 24rem;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 10px;
+        background: linear-gradient(90deg, #4DB34B 0%, #12803B 100%);
+        @include pc {
+          height: 10rem;
+        }
+        @include sp {
+          bottom: -5rem;
+          height: 3rem;
+        }
+      }
+    }
+    &-btns {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 54px;
+      @include pc {
+        gap: 54rem;
+      }
+      @include sp {
+        gap: 12rem;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.business-service {
+  background: linear-gradient(90deg, #4DB34B 0%, #12803B 100%);
+  padding: 128px 0;
+  border-radius: 32px;
+  z-index: 6;
+  @include pc {
+    border-radius: 32rem;
+    padding: 128rem 0;
+  }
+  @include sp {
+    border-radius: 24rem;
+    padding: 64rem 0;
+  }
+  &-ttl {
+    margin-bottom: 32px;
+    @include pc {
+      margin-bottom: 32rem;
+    }
+    @include sp {
+      margin-bottom: 24rem;
+    }
+  }
+  &-items {
+    max-width: 1328px;
+    width: 100%;
+    margin: auto;
+    @include pc {
+      max-width: 1328rem;
+    }
+    @include sp {
+      max-width: 342rem;
+    }
+  }
+  &-item {
+    &:not(:last-child) {
+      border-bottom: 2px solid #B8BBC9;
+      @include sp {
+        border-bottom: 1px solid #B8BBC9;
+      }
+    }
+    &:nth-child(2) {
+      a {
+        @include sp {
+          flex-direction: column-reverse;
+        }
+      }
+      .business-service-item-img {
+        margin-right: 0;
+        margin-left: 80px;
+        @include pc {
+          margin-left: 80rem;
+        }
+        @include sp {
+          margin-left: 0;
+        }
+      }
+    }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 80px 0;
+      position: relative;
+      @include pc {
+        padding: 80rem 0;
+      }
+      @include sp {
+        flex-direction: column;
+        justify-content: center;
+        padding: 24rem 0;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        width: 150%;
+        height: 100%;
+        background: #FAFAFA;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        transition: all 0.4s ease-in-out;
+        opacity: 0;
+      }
+      &:hover {
+        &::after {
+          opacity: 1;
+        }
+        .business-service-item-ttl,
+        .business-service-item-txt {
+          p {
+            color: var(--g-color-black);
+          }
+        }
+      }
+    }
+    &-img {
+      position: relative;
+      z-index: 2;
+      margin-right: 80px;
+      @include pc {
+        margin-right: 80rem;
+      }
+      @include sp {
+        margin-right: 0;
+        margin-bottom: 20rem;
+      }
+      img {
+        width: 400px;
+        @include pc {
+          width: 400rem;
+        }
+        @include sp {
+          width: 100rem;
+        }
+      }
+    }
+    &-ttl {
+      z-index: 2;
+      position: relative;
+      padding-bottom: 32px;
+      margin-bottom: 32px;
+      @include pc {
+        padding-bottom: 32rem;
+        margin-bottom: 32rem;
+      }
+      @include sp {
+        padding-bottom: 20rem;
+        margin-bottom: 20rem;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 160px;
+        height: 2px;
+        background: #4DB34B;
+        @include pc {
+          width: 160rem;
+        }
+        @include sp {
+          width: 100%;
+        }
+      }
+      p {
+        color: #fafafa;
+        font-weight: 700;
+        font-size: 39px;
+        line-height: 1;
+        transition: all 0.4s ease-in-out;
+        letter-spacing: 0.02em;
+        @include pc {
+          font-size: 39rem;
+        }
+        @include sp {
+          line-height: 1.4;
+          font-size: 24rem;
+        }
+      }
+    }
+    &-txt {
+      z-index: 2;
+      position: relative;
+      p {
+        color: #fafafa;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.2;
+        transition: all 0.4s ease-in-out;
+        letter-spacing: 0.02em;
+        @include sp {
+          font-size: 16rem;
+        }
+      }
+    }
+  }
+}

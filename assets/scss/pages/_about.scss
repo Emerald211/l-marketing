@@ -1,0 +1,622 @@
+.lower-about-main {
+	max-width: 1824px;
+	padding-left: 64px;
+	width: 100%;
+	margin-left: auto;
+	display: flex;
+	align-items: start;
+	justify-content: space-between;
+	padding-bottom: 104px;
+	@include pc {
+		padding-bottom: 104rem;
+		padding-left: 64rem;
+		max-width: 1824rem;
+	}
+	@include tb {
+		flex-direction: column-reverse;
+	}
+	@include sp {
+		padding-bottom: 64rem;
+		padding-left: 0;
+		max-width: 342rem;
+		margin: auto;
+	}
+}
+
+.lower-about-content {
+	width: 984px;
+	padding-right: 64px;
+	@include pc {
+		width: 984rem;
+		padding-right: 64rem;
+	}
+	@include tb {
+		width: 984rem;
+		padding-right: 64rem;
+	}
+	@include sp {
+		width: 100%;
+		padding-right: 0;
+	}
+	&-ttl {
+		padding: 64px 0;
+		@include pc {
+			padding: 64rem 0;
+		}
+		@include sp {
+			padding: 0;
+			margin-bottom: 24rem;
+		}
+		p {
+			color: var(--g-color-black);
+			font-weight: 700;
+			font-size: 39px;
+			line-height: 1.4;
+			letter-spacing: 0.02em;
+			@include pc {
+				font-size: 39rem;
+			}
+			@include sp {
+				text-align: center;
+				font-size: 24rem;
+			}
+		}
+	}
+	&-txt {
+		p {
+			color: var(--g-color-black);
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 1.5;
+			letter-spacing: 0.02em;
+			@include sp {
+				font-size: 16rem;
+				font-weight: 500;
+			}
+			span {
+				text-decoration: underline;
+				@include sp {
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}
+
+.lower-about-img {
+	border-radius: 24px 0 0 24px;
+	width: 778px;
+	height: 521px;
+	overflow: hidden;
+	@include pc {
+		border-radius: 24rem 0 0 24rem;
+		width: 778rem;
+		height: 521rem;
+	}
+	@include tb {
+		border-radius: 24rem 0 0 24rem;
+		width: 100%;
+		height: 521rem;
+	}
+	@include sp {
+		margin-bottom: 24rem;
+		border-radius: 8rem;
+		width: 100%;
+		height: 229rem;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.about-mission {
+	background: linear-gradient(90deg, #4db34b 0%, #12803b 100%);
+	padding: 204px 0 130px;
+
+	&.is-vision-active {
+		background: #4db34b;
+		transition: background 0.4s ease-in-out;
+	}
+
+	@include pc {
+		padding: 204rem 0 130rem;
+	}
+
+	@include sp {
+		padding: 64rem 0;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: #f1f1f1;
+		transition: opacity 0.4s ease-in-out;
+	}
+
+	&.active {
+		&::after {
+			opacity: 0;
+		}
+	}
+
+	&-btns {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 2;
+
+		@include sp {
+			z-index: 10;
+			transform: translateY(0);
+			top: 110rem;
+		}
+
+		ul {
+			padding-left: 287px;
+
+			@include pc {
+				padding-left: 287rem;
+			}
+
+			@include sp {
+				padding-left: 15rem;
+			}
+
+			li {
+				position: relative;
+				transition: all 0.4s ease-in-out;
+				padding: 72px 0;
+				@include pc {
+					padding: 72rem 0;
+				}
+				@include sp {
+					padding: 20rem 0;
+				}
+				&::after {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 0;
+					transform: translate(-100%, -50%);
+					height: 4px;
+					width: 600px;
+					background: #4db34b;
+					@include sp {
+						height: 1px;
+						width: 100rem;
+					}
+				}
+				&:not(:last-child) {
+					margin-bottom: 23px;
+					@include pc {
+						margin-bottom: 23rem;
+					}
+					@include sp {
+						margin-bottom: 2rem;
+					}
+				}
+				p {
+					cursor: pointer;
+					display: block;
+					color: #4db34b;
+					font-family: $font-lato;
+					font-weight: 700;
+					font-size: 22px;
+					line-height: 1;
+					letter-spacing: 0.04em;
+					position: relative;
+					transition: all 0.4s ease-in-out;
+					text-align: center;
+					z-index: 2;
+					@include pc {
+						font-size: 22rem;
+					}
+					@include sp {
+						font-size: 8rem;
+					}
+					span {
+						z-index: 2;
+						position: relative;
+					}
+					&::after {
+						content: '';
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%) rotate(45deg);
+						width: 120px;
+						height: 120px;
+						border-radius: 4px;
+						border: 4px solid #4db34b;
+						background: #fff;
+						z-index: 1;
+						transition: all 0.4s ease-in-out;
+						@include pc {
+							width: 120rem;
+							height: 120rem;
+						}
+						@include sp {
+							border: 1px solid #4db34b;
+							width: 34rem;
+							height: 34rem;
+						}
+					}
+				}
+				&.active {
+					transform: translateX(200px);
+					@include pc {
+						transform: translateX(200rem);
+					}
+					@include sp {
+						transform: translateX(20rem);
+					}
+					p {
+						color: #fff;
+						transform: scale(1.3);
+						@include sp {
+							transform: scale(1.1);
+						}
+						&::after {
+							background: #4db34b;
+						}
+					}
+				}
+
+				// New and corrected hover styles to add
+				&:hover {
+					transform: translateX(200px);
+					@include pc {
+						transform: translateX(200rem);
+					}
+					@include sp {
+						transform: translateX(20rem);
+					}
+				}
+				&:hover p {
+					color: #fff;
+					transform: scale(1.3);
+					@include sp {
+						transform: scale(1.1);
+					}
+				}
+				&:hover p::after {
+					background: #4db34b;
+				}
+			}
+		}
+	}
+}
+
+.about-greeting {
+	background: linear-gradient(95.83deg, #edeef1 1.54%, #dfe9f3 161.21%);
+	padding: 104px 0 160px;
+	@include pc {
+		padding: 104rem 0 160rem;
+	}
+	@include sp {
+		padding: 80rem 0;
+	}
+	&-ttl {
+		margin-bottom: 80px;
+		@include pc {
+			margin-bottom: 80rem;
+		}
+		.sec-ttl {
+			text-align: center;
+		}
+	}
+	&-main {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0 64px;
+		@include pc {
+			gap: 0 64rem;
+		}
+		@include sp {
+			grid-template-columns: repeat(1, 1fr);
+			gap: 32rem;
+		}
+	}
+	&__elem {
+		&-img {
+			width: 100%;
+			@include sp {
+				border-radius: 16rem;
+				overflow: hidden;
+				height: 300rem;
+				margin-bottom: 16rem;
+			}
+			img {
+				width: 100%;
+				@include sp {
+					height: 100%;
+					object-fit: cover;
+					object-position: top;
+				}
+			}
+		}
+		&-name {
+			margin-bottom: 20px;
+			@include pc {
+				margin-bottom: 20rem;
+			}
+			p {
+				font-weight: 700;
+				font-size: 25px;
+				line-height: 2;
+				letter-spacing: 0.02em;
+				color: var(--g-color-black);
+				@include pc {
+					font-size: 25rem;
+				}
+				@include sp {
+					font-size: 22rem;
+				}
+			}
+			span {
+				display: block;
+				font-family: $font-lato;
+				font-weight: 700;
+				font-size: 14px;
+				line-height: 1.6;
+				letter-spacing: 0.04em;
+				@include sp {
+					font-size: 14rem;
+				}
+			}
+		}
+		&-txt {
+			p {
+				color: var(--g-color-black);
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 1.5;
+				letter-spacing: 0.02em;
+				@include sp {
+					font-size: 14rem;
+				}
+			}
+		}
+	}
+}
+
+.about-company {
+	padding: 120px 0;
+	@include pc {
+		padding: 120rem 0;
+	}
+	@include sp {
+		padding: 64rem 0;
+	}
+	&-ttl {
+		margin-bottom: 104px;
+		@include pc {
+			margin-bottom: 104rem;
+		}
+		@include sp {
+			margin-bottom: 24rem;
+		}
+		.sec-topics-ttl-deco {
+			@include sp {
+				left: 215rem;
+			}
+		}
+	}
+	&-main {
+		display: flex;
+		align-items: stretch;
+		justify-content: space-between;
+		@include tb {
+			flex-direction: column-reverse;
+		}
+	}
+	&-detail {
+		width: 740px;
+		@include pc {
+			width: 740rem;
+		}
+		@include tb {
+			width: 100%;
+		}
+		&__elem {
+			display: flex;
+			align-items: center;
+			justify-content: left;
+			padding: 32px 0;
+			border-bottom: 1px solid #4db34b;
+			@include pc {
+				padding: 32rem 0;
+			}
+			@include sp {
+				display: block;
+				padding: 24rem 64rem;
+			}
+			p,
+			li {
+				color: var(--g-color-black);
+				font-weight: 500;
+				font-size: 20px;
+				line-height: 1.5;
+				letter-spacing: 0.02em;
+				@include pc {
+					font-size: 20rem;
+				}
+				@include sp {
+					font-size: 16rem;
+				}
+			}
+			&-name {
+				width: 280px;
+				@include pc {
+					width: 280rem;
+				}
+				@include sp {
+					margin-bottom: 16rem;
+					width: 100%;
+				}
+				p {
+					font-weight: 700;
+				}
+			}
+			&-val {
+				max-width: 100%;
+				width: 100%;
+				ul {
+					list-style: disc;
+					padding-left: 20px;
+					@include pc {
+						padding-left: 20rem;
+					}
+					@include sp {
+						padding-left: 22rem;
+					}
+				}
+				p,
+				li {
+					@include sp {
+						font-size: 16rem;
+					}
+				}
+			}
+		}
+	}
+	&-img {
+		width: 740px;
+		border-radius: 24px;
+		overflow: hidden;
+		@include pc {
+			width: 740rem;
+			border-radius: 24rem;
+		}
+		@include tb {
+			width: 100%;
+			margin-top: 24rem;
+		}
+		@include sp {
+			border-radius: 6rem;
+			height: 190rem;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+.about-client {
+	padding-bottom: 104px;
+	@include pc {
+		padding-bottom: 104rem;
+	}
+	@include sp {
+		padding-bottom: 64rem;
+	}
+	&-ttl {
+		margin-bottom: 80px;
+		@include pc {
+			margin-bottom: 80rem;
+		}
+		@include sp {
+			margin-bottom: 40rem;
+		}
+		.sec-ttl {
+			margin-left: auto;
+			width: 534px;
+			@include pc {
+				width: 534rem;
+			}
+			@include sp {
+				width: 100%;
+			}
+			h2 {
+				font-size: 48px;
+				line-height: 1;
+				@include pc {
+					font-size: 48rem;
+				}
+				@include sp {
+					font-size: 34rem;
+				}
+			}
+			p {
+				line-height: 1;
+			}
+			&::after {
+				left: 380px;
+				top: 42%;
+				@include pc {
+					left: 380rem;
+				}
+				@include sp {
+					top: 38%;
+					left: 280rem;
+				}
+			}
+			.sec-topics-ttl-deco {
+				top: 42%;
+				left: 370px;
+				@include pc {
+					left: 370rem;
+				}
+				@include sp {
+					top: 38%;
+					left: 275rem;
+				}
+			}
+		}
+	}
+	&-main {
+		margin-bottom: 94px;
+		@include pc {
+			margin-bottom: 94rem;
+		}
+		@include sp {
+			margin-bottom: 40rem;
+		}
+		img {
+			width: 100%;
+			&:not(:last-child) {
+				margin-bottom: 35px;
+				@include pc {
+					margin-bottom: 35rem;
+				}
+				@include sp {
+					margin-bottom: 4rem;
+				}
+			}
+		}
+	}
+	&-txt {
+		p {
+			text-align: center;
+			font-weight: 500;
+			font-size: 31px;
+			line-height: 1.5;
+			letter-spacing: 0.02em;
+			@include pc {
+				font-size: 31rem;
+			}
+			@include sp {
+				font-size: 16rem;
+			}
+			span {
+				font-size: 49px;
+				@include pc {
+					font-size: 49rem;
+				}
+				@include sp {
+					font-size: 26rem;
+				}
+			}
+		}
+	}
+}

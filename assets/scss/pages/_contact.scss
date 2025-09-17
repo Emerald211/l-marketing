@@ -1,0 +1,268 @@
+.contact-main {
+  padding-bottom: 180px;
+  @include pc {
+    padding-bottom: 180rem;
+  }
+  @include sp {
+    padding-bottom: 64rem;
+  }
+  .contact-form {
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 36px;
+    margin: auto;
+    @include pc {
+      padding: 0 36rem;
+    }
+    @include sp {
+      padding: 0;
+    }
+    & > p {
+      color: var(--g-color-black);
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.6;
+      letter-spacing: 0.02em;
+      text-align: center;
+      margin-bottom: 104px;
+      @include pc {
+        font-size: 20rem;
+        margin-bottom: 104rem;
+      }
+      @include sp {
+        font-size: 16rem;
+        margin-bottom: 40rem;
+      }
+    }
+    &__elem {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      margin-bottom: 56px;
+      @include pc {
+        margin-bottom: 56rem;
+      }
+      @include sp {
+        display: block;
+      }
+      &-label {
+        max-width: 256px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        @include sp {
+          max-width: 100%;
+          justify-content: left;
+          margin-bottom: 24rem;
+        }
+        p {
+          font-size: 16px;
+          letter-spacing: 0.02em;
+          color: var(--g-color-black);
+          font-weight: bold;
+          line-height: 1;
+          @include sp {
+            font-size: 16rem;
+          }
+        }
+        span {
+          font-size: 13px;
+          letter-spacing: 0.02em;
+          color: var(--g-color-white);
+          display: inline-flex;
+          align-items: center;
+          line-height: 1.4;
+          justify-content: center;
+          background: linear-gradient(90deg, #4DB34B 0%, #12803B 100%);
+          border-radius: 2px;
+          padding: 4px 8px;
+          font-weight: bold;
+          margin-right: 16px;
+          @include sp {
+            margin-right: 16rem;
+            padding: 4rem 8rem;
+            font-size: 12rem;
+          }
+          &._not-req {
+            border: 1px solid #12803B;
+            background: var(--g-color-white);
+            background: linear-gradient(90deg, #4DB34B 0%, #12803B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+      &-inp {
+        max-width: 672px;
+        width: 100%;
+        @include pc {
+          max-width: 672rem;
+        }
+        @include sp {
+          max-width: 100%;
+        }
+        &._grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 32px;
+          @include pc {
+            gap: 32rem;
+          }
+          @include sp {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 8rem;
+            padding-right: 22rem;
+          }
+        }
+        input,
+        textarea {
+          height: 55px;
+          width: 100%;
+          background: #E6E7EB;
+          border: 1px solid #B7B7B7;
+          border-radius: 4px;
+          padding: 0 24px;
+          font-size: 16px;
+          font-family: "Zen Kaku Gothic New", sans-serif;
+          font-weight: 500;
+          color: var(--g-color-black);
+          letter-spacing: 0.04em;
+          @include sp {
+            padding: 0 24rem;
+            font-size: 16rem;
+            height: 55rem;
+          }
+        }
+        textarea {
+          height: 240px;
+          padding: 16px 24px;
+          @include pc {
+            height: 240rem;
+          }
+          @include sp {
+            padding: 16rem 24rem;
+            height: 240rem;
+          }
+        }
+      }
+    }
+    &-privacy {
+      margin-bottom: 64px;
+      @include pc {
+        margin-bottom: 64rem;
+      }
+      & > p {
+        margin-bottom: 32px;
+        color: var(--g-color-black);
+        font-family: 'Noto Sans JP', serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+        @include pc {
+          margin-bottom: 32rem;
+        }
+        @include sp {
+          font-size: 16rem;
+          margin-bottom: 32rem;
+        }
+      }
+      &-main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &-box {
+        margin-right: 18px;
+        @include pc {
+          margin-right: 18rem;
+        }
+        @include sp {
+          margin-right: 16rem;
+        }
+        span {
+          width: 15px;
+          height: 15px;
+          border: 1px solid #333333;
+          border-radius: 2px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          position: relative;
+          @include sp {
+            width: 15rem;
+            height: 15rem;
+          }
+        }
+      }
+      &-txt {
+        p {
+          font-size: 16px;
+          font-family: 'Noto Sans JP', serif;
+          color: var(--g-color-black);
+          letter-spacing: 0.1em;
+          line-height: 1;
+          font-weight: bold;
+          cursor: pointer;
+          @include sp {
+            font-size: 16rem;
+          }
+          a {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    &-submit {
+      text-align: center;
+      button {
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 512px;
+        height: 66px;
+        border-radius: 100px;
+        background: linear-gradient(90deg, #4DB34B 0%, #12803B 100%);
+        border: unset;
+        outline: unset;
+        cursor: pointer;
+        @include sp {
+          width: 100%;
+          height: 66rem;
+        }
+      }
+      &-txt {
+        margin-right: 32px;
+        font-size: 22px;
+        color: var(--g-color-white);
+        display: inline-block;
+        font-weight: bold;
+        @include sp {
+          font-size: 22rem;
+          margin-right: 32rem;
+        }
+      }
+      svg {
+        width: 36px;
+        height: auto;
+        @include sp {
+          width: 36rem;
+        }
+      }
+    }
+  }
+}
+
+.wpcf7-response-output,
+.wpcf7-not-valid-tip {
+  font-size: 16px;
+  @include pc {
+    font-size: 16rem;
+  }
+  @include sp {
+    font-size: 12rem;
+  }
+}

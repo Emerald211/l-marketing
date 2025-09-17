@@ -1,0 +1,276 @@
+.topics-main {
+  padding-bottom: 200px;
+  @include pc {
+    padding-bottom: 200rem;
+  }
+  .page-ttl {
+    margin-bottom: 120px;
+    @include pc {
+      margin-bottom: 120rem;
+    }
+    @include sp {
+      margin-bottom: 80rem;
+    }
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px 40px;
+    @include pc {
+      gap: 80rem 40rem;
+    }
+    @include sp {
+      display: block;
+    }
+    &__elem {
+      width: 400px;
+      @include pc {
+        width: 400rem;
+      }
+      @include sp {
+        width: 100%;
+      }
+      &:not(:last-child) {
+        @include sp {
+          margin-bottom: 40rem;
+        }
+      }
+      &-img {
+        width: 100%;
+        height: 240px;
+        margin-bottom: 24px;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+        @include pc {
+          height: 240rem;
+        }
+        @include sp {
+          height: 210rem;
+          margin-bottom: 16rem;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &-txt {
+        @include sp {
+          padding: 0 20rem;
+        }
+        &-date {
+          p {
+            font-size: 12px;
+            letter-spacing: 0.1em;
+            color: var(--g-color-black);
+            margin-bottom: 8px;
+            line-height: 1;
+            color: #999999;
+            @include sp {
+              font-size: 10rem;
+              margin-bottom: 8rem;
+            }
+          }
+        }
+        &-ttl {
+          p {
+            max-width: 100%;
+            display: inline-block;
+            position: relative;
+            color: var(--g-color-black);
+            text-overflow: ellipsis;
+            overflow: hidden;
+            text-wrap: nowrap;
+            font-size: 16px;
+            letter-spacing: 0.1em;
+            font-weight: 500;
+            @include sp {
+              font-size: 16rem;
+            }
+            &::after {
+              content: '';
+              position: absolute;
+              width: 0;
+              bottom: 0;
+              right: 0;
+              height: 1px;
+              background: var(--g-color-black);
+              transition: all 0.3s ease-in-out;
+            }
+          }
+        }
+      }
+      &:hover {
+        .topics-main-list__elem-txt-ttl {
+          p {
+            &::after {
+              width: 100%;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.topics-single {
+  .container {
+    border-bottom: 1px solid var(--g-color-black);
+    margin-bottom: 80px;
+    @include sp {
+      margin-bottom: 80rem;
+    }
+  }
+  &-main {
+    padding-top: 120px;
+    padding-bottom: 160px;
+    @include pc {
+      padding-bottom: 160rem;
+      padding-top: 120rem;
+    }
+    @include sp {
+      padding-bottom: 80rem;
+      padding-top: 80rem;
+    }
+  }
+  &-head {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    @include pc {
+      margin-bottom: 80rem;
+    }
+    @include sp {
+      display: block;
+      margin-bottom: 40rem;
+    }
+  }
+  &-img {
+    width: 50%;
+    height: 383px;
+    border-radius: 8px;
+    overflow: hidden;
+    @include pc {
+      height: 383rem;
+    }
+    @include sp {
+      width: 100%;
+      height: 210rem;
+      margin-bottom: 16rem;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-ttl {
+    width: 50%;
+    padding-left: 46px;
+    @include pc {
+      padding-left: 46rem;
+    }
+    @include sp {
+      width: 100%;
+      padding: 0 20rem;
+    }
+    &-date {
+      p {
+        margin-bottom: 24px;
+        letter-spacing: 0.1em;
+        color: #999999;
+        font-size: 16px;
+        line-height: 1;
+        @include pc {
+          margin-bottom: 24rem;
+        }
+        @include sp {
+          margin-bottom: 8rem;
+        }
+      }
+    }
+    &-jp {
+      p {
+        margin-bottom: 40px;
+        font-size: 24px;
+        color: var(--g-color-black);
+        line-height: 1.8;
+        letter-spacing: 0.1em;
+        font-weight: 500;
+        @include pc {
+          margin-bottom: 40rem;
+        }
+        @include sp {
+          font-size: 16rem;
+          margin-bottom: 16rem;
+        }
+      }
+    }
+    &-en {
+      p {
+        font-size: 24px;
+        letter-spacing: 0.1em;
+        color: var(--g-color-black);
+        font-family: $font-human;
+        line-height: 1.8;
+        @include sp {
+          font-size: 16rem;
+        }
+      }
+    }
+  }
+  &-content {
+    border-radius: 8px;
+    background: var(--g-color-white);
+    padding: 64px 55px;
+    @include pc {
+      padding: 64rem 55rem;
+    }
+    @include sp {
+      padding: 40rem 20rem;
+    }
+    * {
+      color: var(--g-color-black);
+      line-height: 1.8;
+      margin-bottom: 20px;
+      font-size: 16px;
+      @include sp {
+        font-size: 14rem;
+        margin-bottom: 24rem;
+      }
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: bold;
+    }
+    h1,
+    h2,
+    h3 {
+      font-size: 20px;
+      @include sp {
+        font-size: 16rem;
+      }
+    }
+  }
+  &-related {
+    &-ttl {
+      p {
+        font-size: 64px;
+        font-family: $font-human;
+        color: var(--g-color-black);
+        margin-bottom: 67px;
+        @include pc {
+          margin-bottom: 67rem;
+          font-size: 64rem;
+        }
+      }
+    }
+  }
+}

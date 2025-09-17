@@ -1,0 +1,1004 @@
+.company-fv {
+  padding-bottom: 223px;
+  @include pc {
+    padding-bottom: 223rem;
+  }
+  @include sp {
+    padding-bottom: 120rem;
+  }
+  .page-ttl {
+    margin-bottom: 99px;
+    @include pc {
+      margin-bottom: 99rem;
+    }
+    @include sp {
+      margin-bottom: 40rem;
+    }
+  }
+  &-main {
+    text-align: center;
+    &-ttl {
+      margin-bottom: 157px;
+      @include pc {
+        margin-bottom: 157rem;
+      }
+      @include sp {
+        margin-bottom: 40rem;
+      }
+      p {
+        color: var(--g-color-black);
+        &:nth-child(1) {
+          font-size: 56px;
+          margin-bottom: 30px;
+          letter-spacing: 0.1em;
+          @include pc {
+            font-size: 56rem;
+            margin-bottom: 30rem;
+          }
+          @include sp {
+            font-weight: bold;
+            font-size: 32rem;
+            margin-bottom: 40rem;
+          }
+        }
+        &:nth-child(2) {
+          font-family: $font-human;
+          font-size: 64px;
+          @include pc {
+            font-size: 64rem;
+          }
+          @include sp {
+            font-size: 32rem;
+          }
+        }
+      }
+    }
+    &-txt {
+      p {
+        font-size: 32px;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        line-height: 2.3;
+        color: var(--g-color-black);
+        @include pc {
+          font-size: 32rem;
+        }
+        @include sp {
+          font-size: 18rem;
+          letter-spacing: 0;
+        }
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.company-mvv {
+  background: var(--g-color-white);
+  padding: 119px 0 220px;
+  height: 110vh;
+  @include pc {
+    padding: 119rem 0 220rem;
+  }
+  @include sp {
+    padding: 80rem 0 140rem;
+  }
+  &-ttl {
+    margin-bottom: 117px;
+    @include pc {
+      margin-bottom: 117rem;
+    }
+    @include sp {
+      margin-bottom: 5vh;
+    }
+  }
+  &-content {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    @include sp {
+      display: block;
+    }
+  }
+  &-img {
+    width: 480px;
+    height: 480px;
+    position: relative;
+    @include pc {
+      width: 480rem;
+      height: 480rem;
+    }
+    @include sp {
+      width: 100%;
+      height: 30vh;
+      margin-bottom: 40rem;
+    }
+    video,
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: all 0.3s ease-in-out;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      &.active {
+        opacity: 1;
+      }
+    }
+    video {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+  }
+  &-txt__wrap {
+    position: relative;
+    width: 550px;
+    @include pc {
+      width: 550rem;
+    }
+    @include sp {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  &-txt {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    .sec-ttl {
+      text-align: right;
+      margin-bottom: 81px;
+      @include pc {
+        margin-bottom: 81rem;
+      }
+      @include sp {
+        text-align: center;
+        margin-bottom: 40rem;
+      }
+    }
+    & > p {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      line-height: 2;
+      color: var(--g-color-black);
+      @include pc {
+        font-size: 24rem;
+      }
+      @include sp {
+        font-size: 15rem;
+        text-align: center;
+      }
+    }
+    &.active {
+      opacity: 1;
+    }
+    &.mvv03_txt {
+      & > p {
+        font-weight: bold;
+        line-height: 1.2;
+        span {
+          font-size: 16px;
+          font-weight: 400;
+          @include sp {
+            font-size: 12rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.company-info {
+  background: var(--g-color-black);
+  padding: 180px 0 220px;
+  @include pc {
+    padding: 180rem 0 280rem;
+  }
+  @include sp {
+    padding: 80rem 0 120rem;
+  }
+  .sec-ttl {
+    margin-bottom: 129px;
+    @include pc {
+      margin-bottom: 129rem;
+    }
+    @include sp {
+      margin-bottom: 40rem;
+    }
+  }
+  &-main {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: 200px;
+    @include pc {
+      margin-bottom: 200rem;
+    }
+    @include sp {
+      margin-bottom: 80rem;
+      flex-direction: column-reverse;
+    }
+    &-tb {
+      width: 812px;
+      @include pc {
+        width: 812rem;
+      }
+      @include sp {
+        width: 100%;
+      }
+      &__elem {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        border-top: 1px solid var(--g-color-white);
+        padding: 32px 0;
+        @include pc {
+          padding: 32rem 0;
+        }
+        @include sp {
+          display: block;
+          padding: 10rem 0;
+        }
+        &.company-info-main-tb__address {
+          .company-info-main-tb__elem-detail {
+            @include sp {
+              padding-bottom: 35rem;
+            }
+          }
+        }
+        &:last-child {
+          border-bottom: 1px solid var(--g-color-white);
+        }
+        &-ttl {
+          width: 40%;
+          @include sp {
+            width: 100%;
+            margin-bottom: 8rem;
+          }
+        }
+        &-detail {
+          width: 60%;
+          position: relative;
+          @include sp {
+            width: 100%;
+          }
+          .company-map {
+            &-txt {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              right: 15px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 16px;
+              letter-spacing: 0.1em;
+              color: var(--g-color-white);
+              @include sp {
+                right: 0;
+                font-size: 16rem;
+                bottom: 0;
+                top: auto;
+                transform: unset;
+              }
+              .a-ico__wrap {
+                margin-left: 11px;
+                @include sp {
+                  margin-left: 11rem;
+                }
+              }
+              .a-ico {
+                gap: 4px 3px;
+                @include sp {
+                  gap: 4rem 3rem;
+                }
+                span {
+                  width: 6px;
+                  height: 6px;
+                  @include sp {
+                    width: 6rem 6rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+        p {
+          font-size: 16px;
+          letter-spacing: 0.1em;
+          color: var(--g-color-white);
+          font-weight: 500;
+          line-height: 2;
+          @include sp {
+            font-size: 16rem;
+          }
+        }
+      }
+    }
+    &-img {
+      width: 481px;
+      height: 612px;
+      border-radius: 8px;
+      overflow: hidden;
+      @include pc {
+        width: 481rem;
+        height: 612rem;
+      }
+      @include sp {
+        width: 100%;
+        height: 264rem;
+        margin-bottom: 45rem;
+        border-radius: 8rem;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &-clients {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    @include sp {
+      flex-direction: column-reverse;
+    }
+    &-list {
+      &__elem {
+        position: relative;
+        padding: 40px 60px 60px;
+        background: var(--g-color-white);
+        @include pc {
+          padding: 40rem 60rem 60rem;
+        }
+        @include sp {
+          padding: 20rem 40rem;
+          border-radius: 8rem;
+        }
+        &:not(:last-child) {
+          margin-bottom: 60px;
+          @include pc {
+            margin-bottom: 60rem;
+          }
+          @include sp {
+            margin-bottom: 40rem;
+          }
+        }
+        // &::before,
+        // &::after {
+        //   content: '';
+        //   position: absolute;
+        //   bottom: 0;
+        //   width: 64px;
+        //   height: 66px;
+        //   background: var(--g-color-blue);
+        //   @include pc {
+        //     width: 64rem;
+        //     height: 66rem;
+        //   }
+        //   @include sp {
+        //     display: none;
+        //   }
+        // }
+        // &::before {
+        //   left: 0;
+        // }
+        // &::after {
+        //   right: 0;
+        // }
+        &-ttl {
+          font-size: 32px;
+          color: var(--g-color-black);
+          font-family: $font-human;
+          margin-bottom: 40px;
+          line-height: 1;
+          text-align: center;
+          @include pc {
+            font-size: 32rem;
+            margin-bottom: 40rem;
+          }
+          @include sp {
+            font-size: 20rem;
+            margin-bottom: 20rem;
+          }
+        }
+        &-img {
+          width: 100%;
+          // &::before,
+          // &::after {
+          //   content: '';
+          //   position: absolute;
+          //   top: 0;
+          //   width: 64px;
+          //   height: 40px;
+          //   background: var(--g-color-blue);
+          //   @include pc {
+          //     width: 64rem;
+          //     height: 40rem;
+          //   }
+          //   @include sp {
+          //     display: none;
+          //   }
+          // }
+          // &::before {
+          //   left: 0;
+          // }
+          // &::after {
+          //   right: 0;
+          // }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+    &-ttl {
+      .sec-ttl {
+        text-align: right;
+        @include sp {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  &-history {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    padding-top: 200px;
+    @include pc {
+      padding-top: 200rem;
+    }
+    @include sp {
+      padding-top: 80rem;
+      display: block;
+    }
+    &-main {
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 45px;
+        left: 52.1px;
+        height: var(--dynamic-height);
+        background: var(--g-color-white);
+        width: 1px;
+        @include sp {
+          top: 10rem;
+          left: 52.1rem;
+        }
+      }
+    }
+    &__elem {
+      display: flex;
+      align-items: start;
+      justify-content: left;
+      margin-top: 40px;
+      @include pc {
+        margin-top: 40rem;
+      }
+      &-year {
+        position: relative;
+        padding-right: 24px;
+        @include sp {
+          padding-right: 24rem;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: var(--g-color-white);
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          @include sp {
+            width: 8rem;
+            height: 8rem;
+          }
+        }
+        p {
+          font-size: 16px;
+          font-family: $font-human;
+          color: var(--g-color-white);
+          line-height: 1;
+          @include sp {
+            font-size: 16rem;
+          }
+        }
+      }
+      &-txt {
+        padding-left: 16px;
+        @include sp {
+          padding-left: 16rem;
+        }
+        p {
+          font-size: 16px;
+          letter-spacing: 0.05em;
+          color: var(--g-color-white);
+          line-height: 1;
+          font-weight: bold;
+          margin-bottom: 16px;
+          @include sp {
+            line-height: 1.5;
+            font-size: 16rem;
+            margin-bottom: 16rem;
+          }
+        }
+        ul {
+          &:not(:last-child) {
+            margin-bottom: 16px;
+            @include sp {
+              margin-bottom: 16rem;
+            }
+          }
+          li {
+            font-size: 14px;
+            letter-spacing: 0.05em;
+            color: var(--g-color-white);
+            line-height: 1.6;
+            @include sp {
+              font-size: 14rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.company-member {
+  background: #A6AEB1;
+  padding: 286px 0 400px;
+  @include pc {
+    padding: 286rem 0 400rem;
+  }
+  @include sp {
+    padding: 80rem 0 180rem;
+  }
+  .sec-ttl {
+    margin-bottom: 90px;
+    @include pc {
+      margin-bottom: 90rem;
+    }
+    @include sp {
+      margin-bottom: 40rem;
+    }
+  }
+  .container {
+    position: relative;
+  }
+  // .swiper-controller {
+  //   position: absolute;
+  //   right: 0;
+  //   top: -100px;
+  // }
+  // .swiper-scrollbar {
+  //   width: 260px;
+  //   height: 1px;
+  //   background: var(--g-color-white);
+  //   position: relative;
+  //   &-ico {
+  //     position: absolute;
+  //     width: 14px;
+  //     height: 14px;
+  //     border-radius: 50%;
+  //     background: var(--g-color-white);
+  //     transition: all 0.8s cubic-bezier(0.39, 0.575, 0.565, 1);
+  //     top: 50%;
+  //     transform: translateY(-50%);
+  //   }
+  // }
+  // &-main {
+  //   &__elem {
+  //     width: 331px;
+  //     cursor: pointer;
+  //     @include pc {
+  //       width: 331rem;
+  //     }
+  //     &:not(:last-child) {
+  //       margin-right: 32px;
+  //     }
+  //     &-img {
+  //       width: 100%;
+  //       height: 433px;
+  //       margin-bottom: 26px;
+  //       overflow: hidden;
+  //       border-radius: 8px;
+  //       position: relative;
+  //       @include pc {
+  //         height: 433rem;
+  //         margin-bottom: 26rem;
+  //       }
+  //     }
+  //     &-date {
+  //       span {
+  //         font-size: 16px;
+  //         letter-spacing: 0.1em;
+  //         color: var(--g-color-white);
+  //         margin-bottom: 8px;
+  //       }
+  //     }
+  //     &-ttl {
+  //       p {
+  //         font-size: 20px;
+  //         color: var(--g-color-white);
+  //         letter-spacing: 0.1em;
+  //         font-family: $font-human;
+  //         position: relative;
+  //         display: inline-block;
+  //         &::after {
+  //           content: '';
+  //           position: absolute;
+  //           height: 1px;
+  //           background: var(--g-color-white);
+  //           transition: all 0.3s ease-in-out;
+  //           width: 0;
+  //           bottom: 0;
+  //           right: 0;
+  //         }
+  //       }
+  //     }
+  //     &:hover {
+  //       .company-member-main__elem-ttl {
+  //         p {
+  //           &::after {
+  //             width: 100%;
+  //             left: 0;
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+  &-main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    @include pc {
+      gap: 16rem;
+    }
+    @include sp {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20rem;
+    }
+  }
+  &__elem {
+    border-radius: 8px;
+    background: var(--g-color-white);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    cursor: pointer;
+    padding: 30px;
+    @include pc {
+      padding: 30rem;
+    }
+    @include sp {
+      padding: 20rem;
+    }
+    &-img {
+      margin-right: 24px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      @include pc {
+        margin-right: 24rem;
+        width: 100rem;
+        height: 100rem;
+      }
+      @include sp {
+        width: 72rem;
+        height: 72rem;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &-txt {
+      p {
+        font-size: 16px;
+        margin-bottom: 8px;
+        letter-spacing: 0.1em;
+        color: var(--g-color-black);
+        font-family: $font-human;
+        line-height: 1;
+        @include pc {
+          font-size: 16rem;
+        }
+        @include sp {
+          font-size: 10rem;
+          margin-bottom: 8rem;
+        }
+      }
+    }
+    &-name {
+      p {
+        font-size: 24px;
+        margin-bottom: 0;
+        @include pc {
+          font-size: 24rem;
+        }
+        @include sp {
+          font-size: 17rem;
+        }
+      }
+    }
+  }
+}
+
+.company-member-modal {
+  position: fixed;
+  max-width: 1520px;
+  width: 100%;
+  height: 90vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--g-color-black);
+  padding: 10vh 0;
+  z-index: 950;
+  border-radius: 8px;
+  overflow-y: auto;
+  transition: clip-path 0.8s cubic-bezier(0.92, 0.46, 0.36, 0.98), opacity 0.9s,
+  visibility 0.4s, transform 0.3s cubic-bezier(0.92, 0.46, 0.36, 0.98);
+  clip-path: inset(0 0 100% 0);
+  opacity: 0;
+  visibility: hidden;
+  padding: 8vh 0;
+  @include pc {
+    max-width: 1520rem;
+  }
+  @include sp {
+    max-width: 90%;
+    padding: 4vh 20rem;
+  }
+  &.open-menu {
+    visibility: visible;
+    opacity: 1;
+    clip-path: inset(0);
+  }
+  &-close {
+    position: absolute;
+    top: 27px;
+    right: 27px;
+    @include sp {
+      top: 30rem;
+      right: 30rem;
+    }
+    button {
+      background: transparent;
+      border: unset;
+      outline: unset;
+      cursor: pointer;
+      svg {
+        width: 30px;
+        height: 20px;
+        @include sp {
+          width: 30rem;
+          height: 20rem;
+        }
+      }
+    }
+  }
+  &-btn {
+    cursor: pointer;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    &:nth-child(1) {
+      left: 19px;
+      @include sp {
+        left: 0;
+      }
+    }
+    &:nth-child(2) {
+      right: 19px;
+      @include sp {
+        right: 0;
+      }
+    }
+    &-ico {
+      margin-bottom: 16px;
+      @include sp {
+        margin-bottom: 16rem;
+      }
+      svg {
+        width: 11px;
+        height: 24px;
+        @include sp {
+          width: 11rem;
+          height: 24rem;
+        }
+      }
+    }
+    &-txt {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+        letter-spacing: 0.1em;
+        font-size: 12px;
+        color: var(--g-color-white);
+        font-family: $font-human;
+        line-height: 1;
+        @include sp {
+          font-size: 12rem;
+        }
+      }
+    }
+  }
+  &-head {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 5vh;
+    @include sp {
+      margin-bottom: 3vh;
+    }
+  }
+  &-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    @include pc {
+      width: 100rem;
+      height: 100rem;
+    }
+    @include sp {
+      width: 71rem;
+      height: 71rem;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-txt {
+    padding-left: 24px;
+    @include pc {
+      padding-left: 24rem;
+    }
+    @include sp {
+      padding-left: 16rem;
+    }
+  }
+  &-ttl {
+    p {
+      font-size: 16px;
+      color: var(--g-color-white);
+      margin-bottom: 8px;
+      line-height: 1;
+      letter-spacing: 0.1em;
+      font-family: $font-human;
+      @include sp {
+        font-size: 16rem;
+      }
+    }
+  }
+  &-name {
+    p {
+      font-size: 24px;
+      letter-spacing: 0.1em;
+      color: var(--g-color-white);
+      font-family: $font-human;
+      line-height: 1;
+      @include sp {
+        font-size: 24rem;
+      }
+    }
+  }
+  &__elem {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    @include sp {
+      display: block;
+    }
+    &:not(:last-child) {
+      margin-bottom: 30px;
+      @include pc {
+        margin-bottom: 30rem;
+      }
+    }
+    &-ttl {
+      @include sp {
+        margin-bottom: 2vh;
+      }
+      p {
+        position: relative;
+        font-size: 16px;
+        font-family: $font-human;
+        color: var(--g-color-white);
+        letter-spacing: 0.1em;
+        line-height: 1;
+        padding-left: 19px;
+        @include sp {
+          font-size: 16rem;
+          padding-left: 19rem;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: var(--g-color-white);
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          @include sp {
+            width: 8rem;
+            height: 8rem;
+          }
+        }
+      }
+    }
+    &-txt {
+      background: var(--g-color-white);
+      border-radius: 8px;
+      padding: 30px 40px;
+      max-width: 1150px;
+      width: 100%;
+      @include pc {
+        max-width: 1150rem;
+        padding: 30rem 40rem;
+      }
+      @include sp {
+        max-width: 100%;
+        padding: 20rem;
+      }
+      li,
+      p {
+        font-size: 14px;
+        letter-spacing: 0.05em;
+        color: var(--g-color-black);
+        line-height: 1.8;
+        @include sp {
+          font-size: 14rem;
+        }
+      }
+      ul {
+        li {
+          display: flex;
+          align-items: start;
+          justify-content: left;
+          span {
+            &:first-child {
+              width: 10%;
+              @include sp {
+                width: 30%;
+              }
+            }
+            &:nth-child(2) {
+              @include sp {
+                width: 70%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
