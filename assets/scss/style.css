@@ -7858,11 +7858,12 @@ body.is-loading .js-cursor {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	margin: 30px 10px;
 }
 
 .business-flow-section p {
 	font-size: 20px;
-	margin: 30px 10px;
+	/* margin: 30px 10px; */
 	font-weight: bold;
 }
 
@@ -8378,6 +8379,59 @@ body.is-loading .js-cursor {
 }
 
 
+.section-steps{
+	display: flex;
+	flex-direction: column;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	align-items: center;
+	min-height: 100vh;
+}
+
+
+.section-steps h1{
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.section-steps p{
+	font-size: 10px;
+}
+
+.section-steps .step{
+	margin-top: 30px;
+	background: white;
+	display: flex;
+	align-items: center;
+	padding: 10px 30px;
+	gap: 20px;
+	width: 348px;
+}
+
+.section-steps .step h1 {
+	font-size: 30px;
+	color: #06c755;
+	font-weight: extrabold;
+	margin: 0px;
+}
+
+.section-steps .step div h2{
+	font-size: 10px;
+	font-weight: 900;
+}
+
+.section-steps .step div ul{
+	list-style: disc;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+.section-steps .step div ul li{
+	margin-bottom: 10px;
+	font-size: 5px;
+	line-height: 1;
+	color: black;
+}
 .contact-main {
 	padding-bottom: 180px;
 }
